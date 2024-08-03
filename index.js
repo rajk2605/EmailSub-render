@@ -19,7 +19,7 @@ const db = mysql.createConnection({
 
 db.connect(err => {
   if (err) {
-    alert(err);
+    return res.status(400).json({ 'err' });
   }
   console.log('MySQL Connected...');
 });
