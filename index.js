@@ -17,12 +17,7 @@ const db = mysql.createConnection({
   database: 'subscription_db'
 });
 
-db.connect(err => {
-  if (err) {
-    return res.status(400).json({ err });
-  }
-  console.log('MySQL Connected...');
-});
+
 
 // Nodemailer transporter
 const transporter = nodemailer.createTransport({
